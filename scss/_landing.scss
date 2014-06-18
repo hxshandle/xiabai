@@ -1,0 +1,44 @@
+#landing{
+  background:#3bb3c3;
+  .wrapper{
+    position:relative;
+    text-align:center;
+    color:#fff;
+    .progress{
+      position:relative;
+      margin:0 auto;
+      width:190px;
+      height:143px;
+      .progress-icon{
+        position:absolute;
+        left:30px;
+        top:0;
+
+      }
+      .brand-active{
+        z-index:1;
+        background:url(../img/1/1-1.png) no-repeat;
+        width:190px;
+        height:143px;
+      }
+      .brand-gray{
+        z-index:2;
+        background:url(../img/1/1-4.png) no-repeat;
+        width:190px;
+        height:143px;
+      }
+    }// .progress
+    .zh{
+      font-size:14px;
+      margin-top:18px;
+    }
+    .down-img{
+      margin-top:15px;
+      cursor:pointer;
+    }
+    .down-arrow{
+      margin-top:20px;
+    }
+
+  }// .wrapper
+}// #landing

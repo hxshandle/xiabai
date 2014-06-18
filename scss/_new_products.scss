@@ -1,0 +1,46 @@
+#new-products{
+  .cookie{
+    height:100%;
+  }
+  #c-1{
+    left:10%;
+    width:355px;
+    background:url(../img/2/2-1.png) no-repeat 0px 400px;
+  }
+  #c-2{
+    left:5%;
+    width:174px;
+    background:url(../img/2/2-2.png) no-repeat 0 600px;
+  }
+  #c-3{
+    right:15%;
+    width:203px;
+    background:url(../img/2/2-3.png) no-repeat 0 700px;
+  }
+  #c-4{
+    right:5%;
+    width:203px;
+    background:url(../img/2/2-3.png) no-repeat 0 700px;
+  }
+  .pod-outer{
+    position:absolute;
+    top:0;
+    width:401px;
+    height:750px;
+    .pods{
+      position:relative;
+      width:401px;
+      height:682px;
+      background:url(../img/2/2-5.png) no-repeat;
+      img{
+        display:none;
+        position:absolute;
+        bottom:20px;
+        left:26px;
+        &.active{
+          display:inline-block;
+        }
+      }
+    }// .pods
+  }// .pod-outer
+}// END
