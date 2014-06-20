@@ -1,0 +1,24 @@
+- var menu=["spring","summer","autumn","winter"]
+.row.page-section#products
+  .cookies
+    .cookies.absolute#c5-1
+    .cookies.absolute#c5-2
+    .cookies.absolute#c5-3
+
+  .header
+    img(src="img/5/5-1.png")
+    .menu
+      - for (var i = 0; i< 4; i++)
+        a(data-ref="#{menu[i]}") #{menu[i].toUpperCase()}
+        if (i<3)
+          span.split
+  .seasons
+    - for (var i = 0; i < 4; i++)
+      .season(id="#{menu[i]}")
+        .viewer
+          - for (k=0 ; k < 10; k++)
+              img(src="img/5/5-#{k%5+1}.jpg")
+        .nav
+          .slider
+      
+

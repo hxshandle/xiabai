@@ -27,11 +27,19 @@
     top:0;
     width:401px;
     height:750px;
+    z-index:200;
     .pods{
       position:relative;
       width:401px;
       height:682px;
       background:url(../img/2/2-5.png) no-repeat;
+      .pods-inner{
+        width:341px;
+        height:321px;
+        position:relative;
+        top:320px;
+        left:30px;
+      }
       img{
         display:none;
         position:absolute;
@@ -42,5 +50,16 @@
         }
       }
     }// .pods
+    .nav{
+      text-align:center;
+      a{
+        cursor:pointer;
+        width:23px;
+        height:45px;
+        line-height:45px;
+        display:inline-block;
+        margin:20px;
+      }
+    }// .nav
   }// .pod-outer
 }// END

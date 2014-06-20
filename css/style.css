@@ -64,13 +64,21 @@ ul, li {
   position: relative; }
   .page-section .content, .page-section .container {
     width: 1000px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    position: relative; }
 
 .fl {
   float: left; }
 
 .absolute {
   position: absolute; }
+
+.cookies {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0; }
 
 @font-face {
   font-family: didot-bold;
@@ -176,12 +184,19 @@ ul, li {
   position: absolute;
   top: 0;
   width: 401px;
-  height: 750px; }
+  height: 750px;
+  z-index: 200; }
   #new-products .pod-outer .pods {
     position: relative;
     width: 401px;
     height: 682px;
     background: url(../img/2/2-5.png) no-repeat; }
+    #new-products .pod-outer .pods .pods-inner {
+      width: 341px;
+      height: 321px;
+      position: relative;
+      top: 320px;
+      left: 30px; }
     #new-products .pod-outer .pods img {
       display: none;
       position: absolute;
@@ -189,3 +204,267 @@ ul, li {
       left: 26px; }
       #new-products .pod-outer .pods img.active {
         display: inline-block; }
+  #new-products .pod-outer .nav {
+    text-align: center; }
+    #new-products .pod-outer .nav a {
+      cursor: pointer;
+      width: 23px;
+      height: 45px;
+      line-height: 45px;
+      display: inline-block;
+      margin: 20px; }
+
+#about-us .container {
+  z-index: 200; }
+  #about-us .container .outer {
+    width: 400px;
+    text-align: center;
+    position: absolute;
+    top: 165px;
+    left: 30px; }
+    #about-us .container .outer .nav {
+      margin: 30px 0; }
+      #about-us .container .outer .nav a {
+        color: #666;
+        font-size: 12px;
+        font-family: "Microsoft YaHei";
+        margin: 0 14px;
+        cursor: pointer; }
+        #about-us .container .outer .nav a.active, #about-us .container .outer .nav a:hover {
+          color: #3bb3c3; }
+    #about-us .container .outer .brand-cnt {
+      width: 399px;
+      height: 410px;
+      background: url(../img/3/3-6.png) no-repeat;
+      padding: 30px; }
+      #about-us .container .outer .brand-cnt .brand-entry {
+        display: none; }
+        #about-us .container .outer .brand-cnt .brand-entry.active {
+          display: block; }
+        #about-us .container .outer .brand-cnt .brand-entry .header .txt {
+          color: #3bb3c3;
+          font-family: "Microsoft YaHei"; }
+        #about-us .container .outer .brand-cnt .brand-entry .cnt {
+          margin-top: 18px;
+          color: #666;
+          font-size: 12px;
+          text-align: left;
+          height: 275px; }
+          #about-us .container .outer .brand-cnt .brand-entry .cnt .jspVerticalBar {
+            width: 34px;
+            background: url("../img/3/3-8.png") repeat-y 16px 0px; }
+          #about-us .container .outer .brand-cnt .brand-entry .cnt .jspTrack {
+            background: none; }
+          #about-us .container .outer .brand-cnt .brand-entry .cnt .jspDrag {
+            background: url(../img/3/3-4.png) no-repeat; }
+#about-us .cookies #c-5 {
+  left: 2%;
+  width: 380px;
+  height: 100%;
+  background: url(../img/3/3-5.png) no-repeat 0px 400px; }
+#about-us .cookies #c-6 {
+  left: 62%;
+  width: 237px;
+  height: 100%;
+  background: url(../img/3/3-3.png) no-repeat 0px 500px; }
+#about-us .cookies #c-7 {
+  left: 80%;
+  width: 232px;
+  height: 100%;
+  background: url(../img/3/3-2.png) no-repeat 0px 450px; }
+
+#products {
+  background: #f3f3f5; }
+  #products .header {
+    position: relative;
+    z-index: 200;
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center; }
+    #products .header img {
+      display: block;
+      margin: 0 auto; }
+    #products .header .menu a {
+      font-size: 14px;
+      color: #3bb3c3;
+      margin: 13px;
+      cursor: pointer; }
+    #products .header .menu .split {
+      border-right: 1px solid #3bb3c3;
+      font-size: 12px; }
+  #products .seasons {
+    position: relative;
+    z-index: 300;
+    width: 100%;
+    padding: 0 20px; }
+    #products .seasons .season {
+      display: none;
+      position: relative;
+      overflow: hidden;
+      height: 600px; }
+      #products .seasons .season img {
+        margin-right: 1px; }
+      #products .seasons .season.active {
+        display: block; }
+      #products .seasons .season .viewer {
+        position: relative;
+        left: 0;
+        top: 0; }
+      #products .seasons .season .nav .slider {
+        height: 32px;
+        width: 800px;
+        margin: 0 auto;
+        background: red; }
+  #products .cookies #c5-1 {
+    left: 2%;
+    width: 367px;
+    height: 100%;
+    background: url(../img/5/5-2.png) no-repeat 0px 200px; }
+  #products .cookies #c5-2 {
+    left: 62%;
+    width: 167px;
+    height: 100%;
+    background: url(../img/5/5-3.png) no-repeat 0px 500px; }
+  #products .cookies #c5-3 {
+    left: 80%;
+    width: 233px;
+    height: 100%;
+    background: url(../img/5/5-4.png) no-repeat 0px 500px; }
+
+#vip {
+  background: #f3f3f5; }
+  #vip .cookies #c7-1 {
+    left: 2%;
+    width: 248px;
+    height: 100%;
+    background: url(../img/7/7-3.png) no-repeat 0px 200px; }
+  #vip .cookies #c7-2 {
+    left: 50%;
+    width: 319px;
+    height: 100%;
+    background: url(../img/7/7-4.png) no-repeat 0px 200px; }
+  #vip .cookies #c7-3 {
+    right: 414px;
+    width: 415px;
+    height: 100%;
+    background: url("../img/7/7-5.png") no-repeat 0px 300px; }
+  #vip .container {
+    z-index: 200; }
+    #vip .container .header {
+      padding-top: 160px;
+      text-align: center; }
+    #vip .container .outer {
+      margin-top: 64px;
+      position: relative; }
+    #vip .container .cnt {
+      width: 563px;
+      height: 496px;
+      margin: 0 auto;
+      background: url(../img/7/7-7.png) no-repeat;
+      padding-top: 70px; }
+      #vip .container .cnt .btn {
+        text-align: center;
+        margin-top: 35px; }
+        #vip .container .cnt .btn input {
+          background: url("../img/7/7-6.png") no-repeat;
+          width: 135px;
+          height: 47px;
+          line-height: 47px;
+          font-size: 14px;
+          border: none;
+          border-radius: 0;
+          box-shadow: none;
+          margin-left: -26px; }
+      #vip .container .cnt .input-group {
+        padding-left: 140px;
+        margin: 7px 0; }
+      #vip .container .cnt label {
+        color: #3bb3c3;
+        font-size: 12px;
+        display: inline-block;
+        width: 50px; }
+      #vip .container .cnt input {
+        height: 25px;
+        border-radius: 6px;
+        width: 184px;
+        border: 1px solid #ccc;
+        box-shadow: 2px 2px 5px #ccc;
+        font-size: 12px;
+        background: #f6ead9; }
+    #vip .container .desc {
+      width: 495px;
+      height: 149px;
+      margin: 0 auto;
+      background: url(../img/7/7-2.png) no-repeat;
+      margin-top: -100px; }
+
+#top-nav {
+  height: 83px;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  display: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 900;
+  background: #fdfdfd; }
+  #top-nav .container {
+    width: 1000px;
+    margin: 0 auto; }
+    #top-nav .container img {
+      float: left; }
+    #top-nav .container ul {
+      list-style: none; }
+      #top-nav .container ul li {
+        display: inline-block; }
+        #top-nav .container ul li a {
+          font-size: 14px;
+          color: #000;
+          text-decoration: none;
+          line-height: 81px;
+          padding: 0 25px;
+          display: inline-block;
+          border-bottom: 2px solid transparent; }
+          #top-nav .container ul li a:hover, #top-nav .container ul li a.active {
+            color: #3bb3c3;
+            border-bottom: 2px solid #3bb3c3; }
+
+#social-link {
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  z-index: 900;
+  display: none; }
+  #social-link a {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    margin: 0 6px; }
+  #social-link #lnk-1 {
+    background: url("../img/top-nav/1-1.png") no-repeat; }
+    #social-link #lnk-1:hover {
+      background: url("../img/top-nav/1.png") no-repeat; }
+  #social-link #lnk-2 {
+    background: url("../img/top-nav/2-1.png") no-repeat; }
+    #social-link #lnk-2:hover {
+      background: url("../img/top-nav/2.png") no-repeat; }
+  #social-link #lnk-3 {
+    background: url("../img/top-nav/3-1.png") no-repeat; }
+    #social-link #lnk-3:hover {
+      background: url("../img/top-nav/3.png") no-repeat; }
+
+#contact {
+  background: #f3f3f5; }
+  #contact .container .map {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  #contact .container .header {
+    text-align: center;
+    padding-top: 150px; }
+  #contact .container .cnt {
+    padding-left: 470px;
+    padding-top: 100px;
+    position: relative;
+    text-align: center; }
+    #contact .container .cnt .code {
+      margin-top: 20px; }

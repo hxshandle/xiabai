@@ -28,7 +28,7 @@ $(function() {
 	$('.jScrollPane').jScrollPane();
 	$(".img-liquid-fill").imgLiquid();
 	$(".img-liquid-fill-top").imgLiquid({verticalAlign:'top'});
-	$('.top-menu a,.scroll-down').smoothScroll({offset:-99});
+	$('#top-nav a,.scroll-down').smoothScroll({offset:-82});
 	doResize();
 	$(window).resize(doResize);
   doNivoSlider();

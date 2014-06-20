@@ -1,0 +1,78 @@
+#vip{
+  background:#f3f3f5;
+  .cookies{
+    #c7-1{
+      @include cookie('../img/7/7-3.png',248,2%,200);
+    }
+    #c7-2{
+      @include cookie('../img/7/7-4.png',319,50%,200);
+    }
+    #c7-3{
+      right:414px;
+      width:415px;
+      height:100%;
+      background:url('../img/7/7-5.png') no-repeat 0px 300px;
+      
+    }
+
+  }//.cookies
+  .container{
+    z-index:200;
+    .header{
+      padding-top:160px;
+      text-align:center;
+    }
+    .outer{
+      margin-top:64px;
+      position:relative;
+    }
+    .cnt{
+      width:563px;
+      height:496px;
+      margin:0 auto;
+      background:url(../img/7/7-7.png) no-repeat;
+      padding-top:70px;
+      .btn{
+        text-align:center;
+        margin-top:35px;
+        input{
+          background:url('../img/7/7-6.png') no-repeat;
+          width:135px;
+          height:47px;
+          line-height:47px;
+          font-size:14px;
+          border:none;
+          border-radius:0;
+          box-shadow:none;
+          margin-left:-26px;
+        }
+      }
+      .input-group{
+        padding-left:140px;
+        margin:7px 0;
+      }
+      label{
+        color:#3bb3c3;
+        font-size:12px;
+        display:inline-block;
+        width:50px;
+      }
+      input{
+        height: 25px;
+        border-radius: 6px;
+        width: 184px;
+        border: 1px solid #ccc;
+        box-shadow: 2px 2px 5px #ccc;
+        font-size: 12px;
+        background:#f6ead9;
+      }
+    }// .cnt
+    .desc{
+      width:495px;
+      height:149px;
+      margin:0 auto;
+      background:url(../img/7/7-2.png) no-repeat;
+      margin-top:-100px;
+    }
+  }// .container
+}

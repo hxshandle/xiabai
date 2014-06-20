@@ -1,0 +1,13 @@
+-var menu = [{disp:"Home",ref:"new-products",zh:"首页"},{disp:"About Us",ref:"about-us",zh:"关于我们"},{disp:"News",ref:"news",zh:"新闻"},{disp:"Products",ref:"products",zh:"产品"},{disp:"Store",ref:"store",zh:"店铺"},{disp:"Vip",ref:"vip",zh:"会员"},{disp:"Contact",ref:"contact",zh:"联系我们"}]
+.row#top-nav
+  .container
+    img(src="img/top-nav/nav-brand.png")
+    ul
+      - for (var i = 0 ; i < menu.length;i++)
+        li
+          a(href="##{menu[i].ref}" data-zh="#{menu[i].zh}") #{menu[i].disp}
+
+#social-link
+  a#lnk-1(href="javascript:void(0)")
+  a#lnk-2(href="javascript:void(0)")
+  a#lnk-3(href="javascript:void(0)")

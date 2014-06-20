@@ -1,0 +1,29 @@
+- var list = ["品牌简介","品牌故事","品牌定位"]
+.row.page-section.img-liquid-fill#about-us
+  img(src="img/3/3-1.jpg")
+  .container
+    .outer
+      .title
+        img(src="img/3/3-1.png")
+      .nav
+        a.intro.active(data-ref="0") 品牌简介
+        a.story(data-ref="1") 品牌故事
+        a.position(data-ref="2") 品牌定位
+      .brand-cnt
+        - for(var i = 0;i<3;i++)
+          .brand-entry(id="brand-entry-#{i}")
+            .header 
+              img(src="img/3/left.png")
+              span.txt #{list[i]}
+              img(src="img/3/right.png")
+            .cnt
+              - for (var k = 0; k < 3; k++)
+                p 品牌设计灵感：欧式的中国元素、韩式的中国元素为核心。
+                p 风格：时尚、优雅、大方，略带中性的浪漫，体现时代新女性知性、干练、优雅的气质；
+                p 注重搭配，讲究以不同的组合，来配合不同的场合、不同的心情、和不同的个性；
+                p 重细节的处理，强调品质感，面料、版型讲究舒适自由。
+    
+  .cookies
+    .cookie.absolute#c-5
+    .cookie.absolute#c-6
+    .cookie.absolute#c-7

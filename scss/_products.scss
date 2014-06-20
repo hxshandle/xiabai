@@ -1,0 +1,69 @@
+#products{
+  background:#f3f3f5;
+  .header{
+    position:relative;
+    z-index:200;
+    width:1000px;
+    margin:0 auto;
+    text-align:center;
+    img{
+      display:block;
+      margin:0 auto;
+    }
+    .menu{
+      a{
+        font-size:14px;
+        color:#3bb3c3;
+        margin:13px;
+        cursor:pointer;
+      }
+      .split{
+        border-right:1px solid #3bb3c3;
+        font-size:12px;
+      }
+    }// .menu
+  }// .header
+  .seasons{
+    position:relative;
+    z-index:300;
+    width:100%;
+    padding:0 20px;
+    .season{
+      display:none;
+      position:relative;
+      overflow:hidden;
+      height:600px;
+      img{
+        margin-right:1px;
+      }
+      &.active{
+        display:block;
+      }
+      .viewer{
+        position:relative;
+        left:0;
+        top:0;
+      }// .viewer
+      .nav{
+        .slider{
+          height:32px;
+          width:800px;
+          margin:0 auto;
+          background:red;
+        }
+      }// .nav
+    }// .season
+  }//.seasons
+
+  .cookies{
+    #c5-1{
+      @include cookie('../img/5/5-2.png',367,2%,200);
+    }
+    #c5-2{
+      @include cookie('../img/5/5-3.png',167,62%,500);
+    }
+    #c5-3{
+      @include cookie('../img/5/5-4.png',233,80%,500);
+    }
+  }
+}
