@@ -1,5 +1,8 @@
 (function($) {
   function imageTour() {}
+  /*
+  * usage ImageTour.show(el) // el is elments
+  */
   imageTour.prototype = function() {
     var bbb = 123;
     var $img = null;

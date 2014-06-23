@@ -17,7 +17,12 @@
       .season(id="#{menu[i]}")
         .viewer
           - for (k=0 ; k < 10; k++)
+            a.entry(data-ref="img/5/5-#{k%5+1}.jpg")
               img(src="img/5/5-#{k%5+1}.jpg")
+              .mask
+                .t1 2014
+                .t2 #{menu[i].toUpperCase()}
+                img(src="img/5/5-5.png")
         .nav
           .slider
       

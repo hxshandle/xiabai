@@ -280,41 +280,84 @@ ul, li {
     z-index: 200;
     width: 1000px;
     margin: 0 auto;
-    text-align: center; }
+    text-align: center;
+    padding-top: 160px; }
     #products .header img {
       display: block;
       margin: 0 auto; }
-    #products .header .menu a {
-      font-size: 14px;
-      color: #3bb3c3;
-      margin: 13px;
-      cursor: pointer; }
-    #products .header .menu .split {
-      border-right: 1px solid #3bb3c3;
-      font-size: 12px; }
+    #products .header .menu {
+      margin-top: 20px; }
+      #products .header .menu a {
+        font-size: 14px;
+        color: gray;
+        margin: 13px;
+        cursor: pointer; }
+        #products .header .menu a.active, #products .header .menu a:hover {
+          color: #3bb3c3; }
+      #products .header .menu .split {
+        border-right: 1px solid #3bb3c3;
+        font-size: 12px; }
   #products .seasons {
     position: relative;
     z-index: 300;
     width: 100%;
-    padding: 0 20px; }
+    padding: 0 20px;
+    margin-top: 40px; }
     #products .seasons .season {
       display: none;
       position: relative;
       overflow: hidden;
-      height: 600px; }
-      #products .seasons .season img {
-        margin-right: 1px; }
+      height: 700px; }
       #products .seasons .season.active {
         display: block; }
       #products .seasons .season .viewer {
         position: relative;
         left: 0;
         top: 0; }
-      #products .seasons .season .nav .slider {
-        height: 32px;
-        width: 800px;
-        margin: 0 auto;
-        background: red; }
+        #products .seasons .season .viewer .entry {
+          display: inline-block;
+          margin-right: 1px;
+          cursor: pointer;
+          position: relative; }
+          #products .seasons .season .viewer .entry .mask {
+            position: absolute;
+            width: 160px;
+            height: 80px;
+            background: url(../img/5/5-6.png) repeat;
+            top: 180px;
+            left: 100px;
+            text-align: center;
+            color: #fff;
+            font-family: doit;
+            font-size: 16px;
+            font-weight: bold;
+            opacity: 0;
+            filter: "alpha(opacity=0)";
+            transition: all 1s ease;
+            zoom: 1; }
+            #products .seasons .season .viewer .entry .mask .t1 {
+              margin-top: 10px; }
+            #products .seasons .season .viewer .entry .mask .t2 {
+              margin-top: -4px; }
+          #products .seasons .season .viewer .entry:hover .mask {
+            display: block;
+            opacity: 1;
+            filter: "alpha(opacity=100)"; }
+      #products .seasons .season .nav {
+        margin-top: 30px; }
+        #products .seasons .season .nav .slider {
+          width: 800px;
+          margin: 0 auto;
+          border: none;
+          border-bottom: 1px solid #3bb3c3;
+          background: none;
+          border-radius: 0; }
+          #products .seasons .season .nav .slider .ui-slider-handle {
+            background: url(../img/3/3-4.png) no-repeat 50% 50%;
+            width: 32px;
+            height: 32px;
+            border: 0;
+            cursor: pointer; }
   #products .cookies #c5-1 {
     left: 2%;
     width: 367px;
@@ -426,7 +469,8 @@ ul, li {
           border-bottom: 2px solid transparent; }
           #top-nav .container ul li a:hover, #top-nav .container ul li a.active {
             color: #3bb3c3;
-            border-bottom: 2px solid #3bb3c3; }
+            border-bottom: 2px solid #3bb3c3;
+            transition: all 0.3s ease; }
 
 #social-link {
   position: fixed;
