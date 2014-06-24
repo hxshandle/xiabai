@@ -1,0 +1,92 @@
+#news{
+  background:#f3f3f5;
+  .cookies{
+    #c4-1{
+      right:2%;
+      width:401px;
+      height:100%;
+      background:url(../img/4/4-9.png) no-repeat 0px 300px;
+    }
+    #c4-2{
+      @include cookie('../img/4/4-8.png',405,60%,200);
+    }
+    #c4-3{
+      @include cookie('../img/4/4-7.png',532,2%,200);
+    }
+  }// .cookies
+  .container{
+    .header{
+      text-align:center;
+      padding-top:160px;
+    }// .header
+    .news{
+      margin-top:70px;
+      height:430px;
+      .news-entry{
+        display:none;
+        &.active{
+          display:block;
+        }
+        .left{
+          width:250px;
+          height:430px;
+          float:left;
+          position:relative;
+          .pod{
+            position:absolute;
+            width:178px;
+            height:92px;
+            left:36px;
+            top:156px;
+            background:#4cb8c5;
+            color:#fff;
+            font-size:14px;
+            font-family:"Microsoft YaHei";
+            text-align:center;
+            .t1{
+              margin-top:28px;
+            }
+            .more{
+              display:inline-block;
+              background:#fff;
+              color:#4cb8c5;
+              cursor:pointer;
+              padding:0 5px;
+            }
+          }
+          img{
+            width:100%;
+            height:100%;
+          }
+        }// .left
+        .right{
+          float:left;
+          width:750px;
+          height:430px;
+          img{
+            width:100%;
+            height:100%;
+          }
+        }// .right
+      }
+    }// .news
+    .news-nav{
+      margin-top:6px;
+      text-align:right;
+      #news-pre,#news-next{
+        cursor:pointer;
+        margin:0 10px;
+      }
+      .nav-cnt{
+        background:url(../img/4/4-4.png) no-repeat;
+        display:inline-block;
+        width:50px;
+        height:58px;
+        font-size:14px;
+        color:#fff;
+        line-height:70px;
+        text-align:center;
+      }
+    }
+  }// .container
+}

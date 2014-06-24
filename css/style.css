@@ -512,3 +512,80 @@ ul, li {
     text-align: center; }
     #contact .container .cnt .code {
       margin-top: 20px; }
+
+#news {
+  background: #f3f3f5; }
+  #news .cookies #c4-1 {
+    right: 2%;
+    width: 401px;
+    height: 100%;
+    background: url(../img/4/4-9.png) no-repeat 0px 300px; }
+  #news .cookies #c4-2 {
+    left: 60%;
+    width: 405px;
+    height: 100%;
+    background: url(../img/4/4-8.png) no-repeat 0px 200px; }
+  #news .cookies #c4-3 {
+    left: 2%;
+    width: 532px;
+    height: 100%;
+    background: url(../img/4/4-7.png) no-repeat 0px 200px; }
+  #news .container .header {
+    text-align: center;
+    padding-top: 160px; }
+  #news .container .news {
+    margin-top: 70px;
+    height: 430px; }
+    #news .container .news .news-entry {
+      display: none; }
+      #news .container .news .news-entry.active {
+        display: block; }
+      #news .container .news .news-entry .left {
+        width: 250px;
+        height: 430px;
+        float: left;
+        position: relative; }
+        #news .container .news .news-entry .left .pod {
+          position: absolute;
+          width: 178px;
+          height: 92px;
+          left: 36px;
+          top: 156px;
+          background: #4cb8c5;
+          color: #fff;
+          font-size: 14px;
+          font-family: "Microsoft YaHei";
+          text-align: center; }
+          #news .container .news .news-entry .left .pod .t1 {
+            margin-top: 28px; }
+          #news .container .news .news-entry .left .pod .more {
+            display: inline-block;
+            background: #fff;
+            color: #4cb8c5;
+            cursor: pointer;
+            padding: 0 5px; }
+        #news .container .news .news-entry .left img {
+          width: 100%;
+          height: 100%; }
+      #news .container .news .news-entry .right {
+        float: left;
+        width: 750px;
+        height: 430px; }
+        #news .container .news .news-entry .right img {
+          width: 100%;
+          height: 100%; }
+  #news .container .news-nav {
+    margin-top: 6px;
+    text-align: right; }
+    #news .container .news-nav #news-pre, #news .container .news-nav #news-next {
+      cursor: pointer;
+      margin: 0 10px; }
+    #news .container .news-nav .nav-cnt {
+      background: url(../img/4/4-4.png) no-repeat;
+      display: inline-block;
+      width: 50px;
+      height: 58px;
+      font-size: 14px;
+      color: #fff;
+      line-height: 70px;
+      text-align: center; }

@@ -1,0 +1,27 @@
+.row.page-section#news
+  .cookies
+    .cookies.absolute#c4-1
+    .cookies.absolute#c4-2
+    .cookies.absolute#c4-3
+
+  .container
+    .header
+      img(src="img/4/4-1.png")
+    .news
+      - for (var i = 0; i < 10; i++)
+        .news-entry(id="news-#{i}")
+          .left
+            img(src="img/4/4-2.png")
+            .pod
+              .t1 2014秋装发布会
+              a.more(data-ref="news-#{i}") MORE
+          .right
+            img(src="img/4/4-3.png")
+    .news-nav
+      a#news-pre
+        img(src="img/4/4-5.png")
+      span.nav-cnt 1/10
+      a#news-next
+        img(src="img/4/4-6.png")
+
+
