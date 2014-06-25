@@ -44,6 +44,27 @@ ul,li{
   background:url(#{$img}) no-repeat 0px #{$y}px;
 }
 
+@function subtraction($a,$b){
+  @return $a - $b;
+}
+
+@mixin selectorBox($width,$color,$borderColor){
+  .sbHolder{
+    width:$width;
+    border:1px solid $borderColor;
+  }
+  .sbSelector{
+    color: $color;
+    width:subtraction($width,30px);
+  }
+  .sbOptions{
+    width:$width;
+    a:link{
+      color:$color;
+    }
+  }
+}
+
 .cookies{
   position:absolute;
   height:100%;

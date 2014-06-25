@@ -281,7 +281,7 @@ ul, li {
     width: 1000px;
     margin: 0 auto;
     text-align: center;
-    padding-top: 160px; }
+    padding-top: 60px; }
     #products .header img {
       display: block;
       margin: 0 auto; }
@@ -589,3 +589,66 @@ ul, li {
       color: #fff;
       line-height: 70px;
       text-align: center; }
+
+#store {
+  background: #f3f3f5; }
+  #store #c6-1 {
+    left: 60%;
+    width: 324px;
+    height: 100%;
+    background: url(../img/6/6-6.png) no-repeat 0px 200px; }
+  #store .container .header {
+    text-align: center;
+    padding-top: 100px; }
+  #store .container .store-gallery {
+    position: relative;
+    margin-top: 80px; }
+    #store .container .store-gallery #store-pre, #store .container .store-gallery #store-next {
+      position: absolute;
+      top: 140px;
+      cursor: pointer; }
+    #store .container .store-gallery #store-pre {
+      left: 85px; }
+    #store .container .store-gallery #store-next {
+      left: 860px; }
+    #store .container .store-gallery .img-container {
+      width: 601px;
+      height: 405px;
+      position: relative;
+      background: url(../img/6/6-5.png) no-repeat;
+      padding-top: 10px;
+      padding-left: 8px;
+      margin: 0 auto; }
+      #store .container .store-gallery .img-container .store-entry {
+        width: 584px;
+        display: none; }
+        #store .container .store-gallery .img-container .store-entry.active {
+          display: block; }
+  #store .container .selectors {
+    margin-top: 25px; }
+    #store .container .selectors .sel-box {
+      float: left; }
+    #store .container .selectors #provision-sel-box {
+      margin-left: 300px; }
+      #store .container .selectors #provision-sel-box .sbHolder {
+        width: 120px;
+        border: 1px solid #3bb3c3; }
+      #store .container .selectors #provision-sel-box .sbSelector {
+        color: #3bb3c3;
+        width: 90px; }
+      #store .container .selectors #provision-sel-box .sbOptions {
+        width: 120px; }
+        #store .container .selectors #provision-sel-box .sbOptions a:link {
+          color: #3bb3c3; }
+    #store .container .selectors #address-sel-box {
+      margin-left: 10px; }
+      #store .container .selectors #address-sel-box .sbHolder {
+        width: 270px;
+        border: 1px solid #3bb3c3; }
+      #store .container .selectors #address-sel-box .sbSelector {
+        color: #3bb3c3;
+        width: 240px; }
+      #store .container .selectors #address-sel-box .sbOptions {
+        width: 270px; }
+        #store .container .selectors #address-sel-box .sbOptions a:link {
+          color: #3bb3c3; }

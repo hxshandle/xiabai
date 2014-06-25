@@ -1,0 +1,59 @@
+#store{
+  background:#f3f3f5;
+  #c6-1{
+      @include cookie('../img/6/6-6.png',324,60%,200);
+  }
+  .container{
+    .header{
+      text-align:center;
+      padding-top:100px;
+    }
+    .store-gallery{
+      position:relative;
+      margin-top:80px;
+      #store-pre,#store-next{
+        position:absolute;
+        top:140px;
+        cursor:pointer;
+      }
+      #store-pre{
+        left:85px;
+      }
+      #store-next{
+        left:860px;
+      }
+      .img-container{
+        width:601px;
+        height:405px;
+        position:relative;
+        background:url(../img/6/6-5.png) no-repeat;
+        padding-top:10px;
+        padding-left:8px;
+        margin:0 auto;
+        
+        .store-entry{
+          width:584px;
+          display:none;
+          &.active{
+            display:block;
+          }
+        }// .store-entry
+      }// .img-container
+    }// .store-gallery
+    .selectors{
+      margin-top:25px;
+      .sel-box{
+        float:left;
+      }
+      #provision-sel-box{
+        margin-left:300px;
+        @include selectorBox(120px,#3bb3c3,#3bb3c3);
+      }// #provision-sel-box
+      #address-sel-box{
+        margin-left:10px;
+        @include selectorBox(270px,#3bb3c3,#3bb3c3);
+      }
+    }// .selectors
+  }// .container
+
+}

@@ -1,0 +1,32 @@
+- var provision = ["浙江省","河北省","山西省","江苏省","吉林省","黑龙江省"]
+- for (var i = 0; i < provision.length;i++)
+  - for (var k = 0; k < 10;k++)
+    input(type="hidden" class="d-prov-#{i}" value="#{provision[i]}实体店-#{k}")
+
+.row.page-section#store
+  .cookies
+    .cookies.absolute#c6-1
+  .container
+    .header
+      img(src="img/6/6-1.png")
+
+    .store-gallery
+      // for provision
+      a#store-pre
+        img(src="img/6/6-4.png")
+      .img-container
+        - for (var i = 0; i < provision.length;i++)
+          - for (var k = 0 ; k < 10; k++)
+            .store-entry(id="prov-#{i}-#{k}")
+              - for(var p = 0 ; p < 5; p++)
+                img(src="img/6/6-2.png")
+      a#store-next
+        img(src="img/6/6-3.png")
+    .selectors
+      .sel-box#provision-sel-box
+        select#provision
+          - for (var i = 0; i < provision.length ; i++)
+            option(value="prov-#{i}") #{provision[i]}
+      .sel-box#address-sel-box
+        select#address
+
