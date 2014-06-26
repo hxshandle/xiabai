@@ -22,8 +22,8 @@
     .news{
       margin-top:70px;
       height:430px;
+      position:relative;
       .news-entry{
-        display:none;
         &.active{
           display:block;
         }

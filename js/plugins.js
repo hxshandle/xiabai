@@ -57,5 +57,23 @@ $(function() {
       top: "-100px",
     }
   }), 0);
+  scrollController.addTween("#news .news", TweenMax.from($("#news .news"), 1, {
+    css: {
+      opacity: "0",
+      top: "-100px",
+    }
+  }), 0);
+  scrollController.addTween("#products .seasons", TweenMax.from($("#products .seasons"), 1, {
+    css: {
+      opacity: "0",
+      top: "-100px",
+    }
+  }), 0);
+  scrollController.addTween("#store .container .store-gallery", TweenMax.from($("#store .container .store-gallery"), 1, {
+    css: {
+      opacity: "0",
+      top: "-100px",
+    }
+  }), 0);
 });
 

@@ -21,6 +21,17 @@ $(function() {
     moveJSlider('.store-entry.active', 1);
   });
 
+  
+  function _switch(id){
+    var actId = id;
+    var oldEntry = $('.store-entry.active');
+    oldEntry.fadeOut(400,function(){
+      oldEntry.removeClass('active');
+      $('#'+actId).addClass('active').fadeIn();
+    });
+  }
+
+
   function _buildSelBox(data, prov) {
     var h = '<select class="address-sel" id="' + prov + '-address-sel">';
     for (var i = 0; i < data.length; i++) {
@@ -31,7 +42,7 @@ $(function() {
     $('#address-sel-box').html(h);
     $('#' + prov + '-address-sel').selectbox({
       onChange: function(val, inst) {
-        console.log(currentProv + "-" + val);
+        _switch(currentProv + "-" + val);
       }
     });
   }
@@ -51,6 +62,8 @@ $(function() {
     onChange: function(val, inst) {
       currentProv = val;
       _buildAddressSel(val);
+      // switch to default 0
+      _switch(val+'-0');
     }
   });
   _buildAddressSel(currentProv);
