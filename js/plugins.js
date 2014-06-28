@@ -31,7 +31,7 @@ $(function() {
       opacity: "0",
       top: "60px",
     }
-  }), 0, 400);
+  }), 0 );
 
   scrollController.addTween("#about-us .outer", TweenMax.from($("#about-us .outer"), 1, {
     css: {
@@ -50,7 +50,7 @@ $(function() {
       opacity: "0",
       top: "100px",
     }
-  }), 0);
+  }), 0,-100);
   scrollController.addTween("#contact .map", TweenMax.from($("#contact .map"), 1, {
     css: {
       opacity: "0",

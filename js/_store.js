@@ -1,5 +1,6 @@
 $(function() {
   $('#c6-1').parallax(0, 0.3, 1800);
+  $('#c6-2').parallax(0, 0.3, 1800);
 
   $('#store .store-entry').slidesjs({
     pagination: {
