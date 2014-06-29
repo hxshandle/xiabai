@@ -1,19 +1,15 @@
 @font-face {
   font-family: didot-bold;
   src: url(../fonts/Didot_Bold.ttf); }
-
 @font-face {
   font-family: didot;
   src: url(../fonts/Didot.ttf); }
-
 @font-face {
   font-family: didot-htf-m96-medium-ital;
   src: url(../fonts/didot-htf-m96-medium-ital.ttf); }
-
 @font-face {
   font-family: thex;
   src: url(../fonts/HelveticaNeueLTPro-ThEx.otf); }
-
 * {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -87,19 +83,15 @@ ul, li {
 @font-face {
   font-family: didot-bold;
   src: url(../fonts/Didot_Bold.ttf); }
-
 @font-face {
   font-family: didot;
   src: url(../fonts/Didot.ttf); }
-
 @font-face {
   font-family: didot-htf-m96-medium-ital;
   src: url(../fonts/didot-htf-m96-medium-ital.ttf); }
-
 @font-face {
   font-family: thex;
   src: url(../fonts/HelveticaNeueLTPro-ThEx.otf); }
-
 .ft-STHeiti {
   font-family: "STHeiti Light [STXihei]"; }
 
@@ -554,12 +546,6 @@ ul, li {
     margin-top: 30px;
     height: 430px;
     position: relative; }
-    #news .container .news .news-section {
-      display: none; }
-      #news .container .news .news-section.active {
-        display: block; }
-    #news .container .news .news-entry.active {
-      display: block; }
     #news .container .news .news-entry .left {
       width: 250px;
       height: 430px;

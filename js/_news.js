@@ -4,10 +4,12 @@ $(function() {
   $('#c4-3').parallax(0, 0.4, 1300);
 
 
-  var totalNewsCount = $('.news-entry').length;
-  var currentNewsIndex = 0;
 
   function _slidesjs(sel){
+    if($(sel).data('plugin_slidesjs')){
+      console.log('cancel slidesjs');
+      return;
+    }
     $(sel).slidesjs({
       pagination: {
         active: false
@@ -32,7 +34,14 @@ $(function() {
     $('.news-section').hide();
     var sliderjs = $('#news .news').data('plugin_slidesjs');
     sliderjs.goto(number);
-    $('#news-section-'+ --number).fadeIn();
+    $('#news-section-'+ --number).addClass('active');
+    _slidesjs('#news-section-'+ number);
+    /*
+    setTimeout(function(){
+      $('#news .news-section.active .news-entry:first').fadeIn();
+    },1000);
+    */
+
   }
 
   $('#news .menu a').click(function(){
@@ -41,13 +50,16 @@ $(function() {
       return;
     }
     $('#news .menu a.active').removeClass('active');
+    $('#new .news-section.active').removeClass('active');
     $this.addClass('active');
     _activeSection($this.data('ref'));
+    setTimeout(_updateNavText,0);
   });
+
   _activeSection(0);
 
   function _updateNavText(){
-    var _ins = $('#news .news').data('plugin_slidesjs');
+    var _ins = $('#news .news .news-section.active').data('plugin_slidesjs');
     var total = _ins.data['total'];
     var curIdx = _ins.data['current'];
     var text = "" + (curIdx+1)+"/"+total;
@@ -55,12 +67,12 @@ $(function() {
   }
 
   $('#news-pre').click(function() {
-    moveJSlider('#news .news', - 1);
+    moveJSlider('#news .news .news-section.active', - 1);
     setTimeout(_updateNavText,400);
   });
 
   $('#news-next').click(function() {
-    moveJSlider('#news .news', 1);
+    moveJSlider('#news .news .news-section.active', 1);
     setTimeout(_updateNavText,400);
   });
 

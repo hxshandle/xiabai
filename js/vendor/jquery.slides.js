@@ -452,7 +452,7 @@
           next = 0;
         }
         this._setActive(next);
-        slidesControl = $(".slidesjs-control", $element);
+        slidesControl = $(".slidesjs-control", $element).eq(0);
         if (number > -1) {
           slidesControl.children(":not(:eq(" + currentSlide + "))").css({
             display: "none",

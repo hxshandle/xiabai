@@ -38,16 +38,9 @@
       position:relative;
       
       .news-section{
-        display:none;
-        &.active{
-          display:block;
-        }
       }// .news-section
 
       .news-entry{
-        &.active{
-          display:block;
-        }
         .left{
           width:250px;
           height:430px;
