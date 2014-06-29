@@ -1,3 +1,4 @@
+- var menu = ["菜单1","菜单2","菜单3"]
 .row.page-section#news
   .cookies
     .cookies.absolute#c4-1
@@ -7,16 +8,46 @@
   .container
     .header
       img(src="img/4/4-1.png")
+      .menu
+        - for (var i = 0; i< 3; i++)
+          if i ==0
+            a.active(data-ref="#{i}") #{menu[i]}
+          else
+            a(data-ref="#{i}") #{menu[i]}
     .news
-      - for (var i = 0; i < 10; i++)
-        .news-entry(id="news-#{i}")
-          .left
-            img(src="img/4/4-2.png")
-            .pod
-              .t1 2014秋装发布会
-              a.more(data-ref="news-#{i}") MORE
-          .right
-            img(src="img/4/4-3.png")
+      .news-section.active#news-section-0
+        - for (var i = 0; i < 10; i++)
+          .news-entry(id="news-#{i}")
+            .left
+              img(src="img/4/4-2.png")
+              .pod
+                .t1 2014秋装发布会
+                a.more(data-ref="news-#{i}") MORE
+            .right
+              img(src="img/4/4-3.png")
+
+      .news-section#news-section-1
+        - for (var i = 0; i < 10; i++)
+          .news-entry(id="news-#{i}")
+            .left
+              img(src="img/4/4-2.png")
+              .pod
+                .t1 2014视频
+                a.more(data-ref="news-#{i}") MORE
+            .right
+              img(src="img/4/4-3.png")
+
+      .news-section#news-section-2
+        - for (var i = 0; i < 10; i++)
+          .news-entry(id="news-#{i}")
+            .left
+              img(src="img/4/4-2.png")
+              .pod
+                .t1 2014加盟
+                a.more(data-ref="news-#{i}") MORE
+            .right
+              img(src="img/4/4-3.png")
+
     .news-nav
       a#news-pre
         img(src="img/4/4-5.png")
