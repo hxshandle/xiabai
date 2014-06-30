@@ -108,10 +108,12 @@
       if (this.data.touch) {
         this._setuptouch();
       }
-      $(".slidesjs-control", $element).children(":eq(" + this.data.current + ")").eq(0).fadeIn(0, function() {
-        return $(this).css({
+      $(".slidesjs-control", $element).eq(0).children(":eq(" + this.data.current + ")").eq(0).fadeIn(0, function() {
+        $(this).css({
           zIndex: 10
         });
+        return $(this);
+
       });
       if (this.options.navigation.active) {
         prevButton = $("<a>", {
@@ -206,7 +208,7 @@
       var $element, height, width;
       $element = $(this.element);
       this.data = $.data(this);
-      $(".slidesjs-control", $element).children(":not(:eq(" + this.data.current + "))").css({
+      $(".slidesjs-control", $element).eq(0).children(":not(:eq(" + this.data.current + "))").css({
         display: "none",
         left: 0,
         zIndex: 0
