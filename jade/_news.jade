@@ -28,12 +28,11 @@
 
       .news-section#news-section-1
         - for (var i = 0; i < 10; i++)
-          .news-entry(id="news-#{i}")
-            .left
+          .news-entry.video-entry(id="news-#{i}")
+            .left(data-source="videos/demo.mp4")
               img(src="img/4/4-2.png")
-              .pod
-                .t1 2014视频
-                a.more(data-ref="news-#{i}") MORE
+              img.play-icon(src="img/4/4-10.png")
+              .mark 2014形象大片#{i}
             .right
               img(src="img/4/4-3.png")
 

@@ -77,6 +77,13 @@ $(function() {
   });
 
   _updateNavText();
+  
+  // for video
+  $('#news .video-entry .left').click(function(){
+    var $this = $(this);
+    playVideo($this.data('source'));
+    
+  });
 
 });
 

@@ -15,8 +15,8 @@ $(function() {
     $lastSeason.removeClass('active');
     var lastRef = $lastSeason.data('ref');
     $this.addClass('active');
-    $('#'+lastRef).removeClass('active');
-    $('#'+ref).addClass('active');
+    $('#'+lastRef).removeClass('active').hide();
+    $('#'+ref).addClass('active').hide().fadeIn();
     _initSeason($('#'+ref));
     
   });

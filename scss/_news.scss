@@ -40,6 +40,31 @@
       .news-section{
       }// .news-section
 
+      .video-entry{
+        .left{
+          cursor:pointer;
+          .play-icon{
+            position:absolute;
+            left:88px;
+            top:160px;
+            width:77px;
+            height:77px;
+          }
+          .mark{
+            position:absolute;
+            left:0;
+            bottom:0;
+            background:url(../img/4/4-11.png);
+            color:#4cb8c5;
+            font-size:14px;
+            line-height:35px;
+            height:35px;
+            text-align:center;
+            width:100%;
+          }
+        }
+      }// .video-entry
+
       .news-entry{
         .left{
           width:250px;
