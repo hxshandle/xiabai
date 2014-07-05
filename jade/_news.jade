@@ -1,4 +1,29 @@
 - var menu = ["新闻资讯","视频展示","加盟招商"]
+
+mixin nt
+  - for (var i = 0 ; i < 10 ; i++)
+    p 品牌设计灵感
+    p 欧式的中国元素、韩式的中国元素为核心。风格：时尚、优雅、大方，略带中性的浪漫，体现时代新女性知性、干练、优雅的气质；注重搭配，讲究以不同的组合，来配合不同的场合、不同的心情、和不同的个性；注重细节的处理，强调品质感，面料、版型讲究舒适自由。
+    p 品牌定位
+    p 定位于中档女装，款式多样，风格时尚为销售特点，满足目标消费群的不同购买需求。市场区域和地理分布——国内大中城市及发达地区的中等城市目标——一级、二级城市商场的形象专柜和专厅；一级、二级、三级城市黄金地段、当地商业街的专卖店、商超模式店中店。
+
+#news-details-mask
+  .wrapper
+    .main
+      .left-nav
+        span.sub
+        .nav
+          a.pre
+            img(src="img/4/4-13.png")
+          a.next
+            img(src="img/4/4-14.png")
+      .cnt
+        .title
+        .article
+    a.close
+      img(src="img/4/4-12.png")
+
+    
 .row.page-section#news
   .cookies
     .cookies.absolute#c4-1
@@ -23,6 +48,11 @@
               .pod
                 .t1 2014秋装发布会
                 a.more(data-ref="news-#{i}") MORE
+                .cnt-hide.hide
+                  .title 2014秋装发布会圆满结束-#{i}
+                  .sub DATE 2014/05/01
+                  .article
+                    +nt()
             .right
               img(src="img/4/4-3.png")
 

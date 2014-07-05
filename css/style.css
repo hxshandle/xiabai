@@ -46,6 +46,9 @@ html {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.hide {
+  display: none; }
+
 html {
   width: 100%; }
   html body {
@@ -454,7 +457,8 @@ ul, li {
     width: 1000px;
     margin: 0 auto; }
     #top-nav .container img {
-      float: left; }
+      float: left;
+      margin-right: 50px; }
     #top-nav .container ul {
       list-style: none; }
       #top-nav .container ul li {
@@ -614,6 +618,72 @@ ul, li {
       color: #fff;
       line-height: 70px;
       text-align: center; }
+
+#news-details-mask {
+  position: fixed;
+  background: url(../img/image-tour-mask-bg.png);
+  z-index: 1000;
+  display: none;
+  left: 0;
+  top: 0; }
+  #news-details-mask.active {
+    display: block; }
+  #news-details-mask .wrapper {
+    position: relative;
+    height: 100%; }
+    #news-details-mask .wrapper .close {
+      color: #fff;
+      float: right;
+      cursor: pointer;
+      padding-top: 50px;
+      padding-left: 50px;
+      padding-right: 30px; }
+    #news-details-mask .wrapper .main {
+      height: 100%;
+      width: 1000px;
+      background: #4cb8c5;
+      float: right; }
+      #news-details-mask .wrapper .main .left-nav {
+        width: 120px;
+        float: left;
+        height: 100%;
+        position: relative; }
+        #news-details-mask .wrapper .main .left-nav .sub {
+          background: #fff;
+          color: #4cb8c5;
+          font-size: 12px;
+          line-height: 26px;
+          height: 26px;
+          position: absolute;
+          top: 50%;
+          padding: 0 10px; }
+        #news-details-mask .wrapper .main .left-nav .nav {
+          position: absolute;
+          top: 50%;
+          margin-top: 45px;
+          text-align: center;
+          width: 100%; }
+          #news-details-mask .wrapper .main .left-nav .nav a {
+            margin: 0 13px;
+            cursor: pointer; }
+      #news-details-mask .wrapper .main .cnt {
+        float: left;
+        width: 760px;
+        color: #fff; }
+        #news-details-mask .wrapper .main .cnt .title {
+          font-size: 20px;
+          font-family: "Microsoft YaHei";
+          padding-top: 100px;
+          padding-bottom: 30px;
+          border-bottom: 1px dotted #fff;
+          text-align: center;
+          margin-bottom: 50px; }
+        #news-details-mask .wrapper .main .cnt .article {
+          width: 760px; }
+          #news-details-mask .wrapper .main .cnt .article .jspTrack {
+            background: #3ea0ab; }
+          #news-details-mask .wrapper .main .cnt .article .jspDrag {
+            background: #fff; }
 
 #store {
   background: #f3f3f5; }

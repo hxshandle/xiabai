@@ -128,4 +128,87 @@
       }
     }
   }// .container
-}
+}// #news
+
+#news-details-mask{
+  position:fixed;
+  background:url(../img/image-tour-mask-bg.png);
+  z-index:1000;
+  display:none;
+  left:0;
+  top:0;
+  &.active{
+    display:block;
+  }
+  .wrapper{
+    position:relative;
+    height:100%;
+    .close{
+      color:#fff;
+      float:right;
+      cursor:pointer;
+      padding-top:50px;
+      padding-left:50px;
+      padding-right:30px;
+    }
+    .main{
+      height:100%;
+      width:1000px;
+      background:#4cb8c5;
+      float:right;
+      .left-nav{
+        width:120px;
+        float:left;
+        height:100%;
+        position:relative;
+        .sub{
+          background:#fff;
+          color:#4cb8c5;
+          font-size:12px;
+          line-height:26px;
+          height:26px;
+          position:absolute;
+          top:50%;
+          padding:0 10px;
+        }// .sub
+        .nav{
+          position:absolute;
+          top:50%;
+          margin-top:45px;
+          text-align:center;
+          width:100%;
+          a{
+            margin:0 13px;
+            cursor:pointer;
+          }
+        }//.nav
+      }//.left-nav
+      .cnt{
+        float:left;
+        width:760px;
+        color:#fff;
+        .title{
+          font-size:20px;
+          font-family:"Microsoft YaHei";
+          padding-top:100px;
+          padding-bottom:30px;
+          border-bottom:1px dotted #fff;
+          text-align:center;
+          margin-bottom:50px;
+        }
+        .article{
+          width:760px;
+          .jspTrack{
+            background: #3ea0ab;
+          }
+          .jspDrag{
+            background:#fff;
+          }
+        }
+      }//.cnt
+    }//.main
+  }//.wrapper
+}// #news-details-mask
+
+
+
