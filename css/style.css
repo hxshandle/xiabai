@@ -1,15 +1,19 @@
 @font-face {
   font-family: didot-bold;
   src: url(../fonts/Didot_Bold.ttf); }
+
 @font-face {
   font-family: didot;
   src: url(../fonts/Didot.ttf); }
+
 @font-face {
   font-family: didot-htf-m96-medium-ital;
   src: url(../fonts/didot-htf-m96-medium-ital.ttf); }
+
 @font-face {
   font-family: thex;
   src: url(../fonts/HelveticaNeueLTPro-ThEx.otf); }
+
 * {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -86,15 +90,19 @@ ul, li {
 @font-face {
   font-family: didot-bold;
   src: url(../fonts/Didot_Bold.ttf); }
+
 @font-face {
   font-family: didot;
   src: url(../fonts/Didot.ttf); }
+
 @font-face {
   font-family: didot-htf-m96-medium-ital;
   src: url(../fonts/didot-htf-m96-medium-ital.ttf); }
+
 @font-face {
   font-family: thex;
   src: url(../fonts/HelveticaNeueLTPro-ThEx.otf); }
+
 .ft-STHeiti {
   font-family: "STHeiti Light [STXihei]"; }
 
@@ -669,7 +677,8 @@ ul, li {
       #news-details-mask .wrapper .main .cnt {
         float: left;
         width: 760px;
-        color: #fff; }
+        color: #fff;
+        margin-left: 50px; }
         #news-details-mask .wrapper .main .cnt .title {
           font-size: 20px;
           font-family: "Microsoft YaHei";

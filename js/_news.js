@@ -4,6 +4,9 @@ $(function() {
   showNewsDetails.prototype = function() {
     var $element = $('#news-details-mask');
     var _isWalk = false;
+    var _selector = null;
+    var _currentIndex = - 1;
+    var _totalNewsCount = $('#news-section-0').find('.news-entry').length;
     function _setLayout() {
       $element.css({
         width: global.winWidth + 'px',
@@ -12,6 +15,21 @@ $(function() {
       $('.article', $element).css({
         height: (global.winHeight - 300) + 'px'
       });
+      $('.left-nav', $element).css({
+        display: 'block'
+      });
+      $('.cnt', $element).css({
+        'margin-left': '50px'
+      });
+
+      if (!_isWalk) {
+        $('.left-nav', $element).css({
+          display: 'none'
+        });
+        $('.cnt', $element).css({
+          'margin-left': '120px'
+        });
+      }
     }
     function _clear() {
       $('.title,.sub,.article', $element).removeData('jsp').html('');
@@ -23,22 +41,46 @@ $(function() {
       $('.sub', $element).text(sub);
       $('.title', $element).text(title);
       $('.article', $element).html(article);
-      setTimeout(function(){
-        $('.article',$element).jScrollPane();
-      },500);
+      setTimeout(function() {
+        $('.article', $element).jScrollPane();
+      },
+      500);
       $element.addClass('active');
     }
     function _close() {
       $element.removeClass('active');
     }
+    function _showNext(idx) {
+      var cnt = $('#news-section-0 .news-entry .cnt-hide').eq(idx);
+      var title = $('.title', cnt).text();
+      var sub = $('.sub', cnt).text();
+      var article = $('.article', cnt).html();
+      _show(title, sub, article);
+    }
+    function _move(step) {
+      var nextIdx = _currentIndex + step;
+      nextIdx = step > 0 && nextIdx > _totalNewsCount - 1 ? 0: nextIdx;
+      nextIdx = step < 0 && nextIdx < 0 ? _totalNewsCount - 1: nextIdx;
+      console.log('show ->' + nextIdx);
+      _showNext(nextIdx);
+      _currentIndex = nextIdx;
+
+    }
     function init() {
       $('a.close').click(_close);
+      $('a.pre').click(function() {
+        _move( - 1);
+      });
+      $('a.next').click(function() {
+        _move(1);
+      });
     }
 
     init();
     return {
-      show: function(title, sub, article, isWalk) {
+      show: function(title, sub, article, isWalk, curIdx) {
         _isWalk = isWalk;
+        _currentIndex = curIdx;
         _show(title, sub, article);
 
       }
@@ -93,6 +135,14 @@ $(function() {
 
   $('#news .menu a').click(function() {
     var $this = $(this);
+    if ($this.data('ref') == 2) {
+      var cnt = $('#news .jiameng');
+      var title = $('.title', cnt).text();
+      var sub = "";
+      var article = $('.article', cnt).html();
+      Details.show(title, sub, article, false, 0);
+      return
+    }
     if ($this.hasClass('active')) {
       return;
     }
@@ -139,7 +189,10 @@ $(function() {
     var title = $('.title', cnt).text();
     var sub = $('.sub', cnt).text();
     var article = $('.article', cnt).html();
-    Details.show(title, sub, article, true);
+    var newsEntry = $this.parents('.news-entry');
+    var newsRoot = $this.parents('.news-section');
+    var curIdx = newsRoot.find('.news-entry').index(newsEntry);
+    Details.show(title, sub, article, true, curIdx);
   });
 
 });
