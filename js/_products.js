@@ -15,10 +15,10 @@ $(function() {
     $lastSeason.removeClass('active');
     var lastRef = $lastSeason.data('ref');
     $this.addClass('active');
-    $('#'+lastRef).removeClass('active').hide();
-    $('#'+ref).addClass('active').hide().fadeIn();
-    _initSeason($('#'+ref));
-    
+    $('#' + lastRef).removeClass('active').hide();
+    $('#' + ref).addClass('active').hide().fadeIn();
+    _initSeason($('#' + ref));
+
   });
 
   function _moveProd($el, val) {
@@ -46,9 +46,29 @@ $(function() {
     });
   }
 
-  $('#products .season a').click(function() {
-    ImageTour.show($(this));
+  /**
+    $('#products .season .viewer a').colorbox({
+      rel: ".prod-show a"
+    });
+    **/
+
+  $('#products .season').each(function() {
+    var $this = $(this);
+    var id = $this.attr('id');
+    $('#' + id + ' .entry').colorbox({
+      rel: '#' + id + ' .entry',
+      returnFocus:false
+    });
   });
+
+  /**
+  $('#products .season a').click(function() {
+    //ImageTour.show($(this));
+   //$('#products .viewer a').colorbox({
+    //  rel: ".prod-show a"
+    //});
+  });
+  **/
 
   $('#products .season:first').addClass('active');
   _initSeason($('#products .season:first'));
